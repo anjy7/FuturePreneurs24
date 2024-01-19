@@ -25,6 +25,19 @@ const teamSchema = mongoose.Schema(
     currentRound: {
       type: Number,
     },
+    sector:{
+      type: String,
+    },
+    newspaperLink: {
+      type: String,
+    },
+    newspaperExists: {
+      type: Boolean,
+      default: false,
+    },
+    newspaperset: {
+      type: Number,
+    },
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -38,6 +51,10 @@ const teamSchema = mongoose.Schema(
       type: Number,
       default: -1,
     },
+    points:{
+      type:Number,
+      default:0,
+    }
   },
   { collection: 'TeamModel' }
 );
